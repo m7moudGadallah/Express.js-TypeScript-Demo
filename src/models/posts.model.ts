@@ -92,7 +92,7 @@ class Post {
    * @param where post matcher
    * @returns array of posts
    */
-  public static find(where: Partial<IPost> | undefined): IPost[] {
+  public static find(where?: Partial<IPost>): IPost[] {
     if (where) return Post.posts.filter((p) => Post.matchPosts(p, where));
     return Post.posts;
   }
