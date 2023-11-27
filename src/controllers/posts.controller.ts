@@ -70,8 +70,19 @@ class PostsController {
     res: Response<JsonResponse.IJsonResponse<IPost>>,
     next: NextFunction
   ) {
-    // TODO: implement createPost
-    notImplementedHandler(req, res, next);
+    const { title, body } = req.body;
+
+    const post: IPost = Post.create({ title, body });
+
+    res.status(HttpStatusCodes.Created).json({
+      success: true,
+      message: 'Post is created successfully',
+      payload: {
+        data: {
+          content: post,
+        },
+      },
+    });
   }
 
   /**
