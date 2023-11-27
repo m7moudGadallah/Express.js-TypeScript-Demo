@@ -16,6 +16,7 @@ This is a personal practice project for experimenting with Express.js and TypeSc
     - [Start the Server](#start-the-server)
   - [Usage](#usage)
   - [API Endpoints](#api-endpoints)
+  - [File Structure](#file-structure)
 
 <!-- /TOC -->
 
@@ -64,5 +65,51 @@ npm run start
 - `POST /api/posts` - Create a new post
 - `PATCH /api/posts/:id` - Update a post
 - `DELETE /api/posts/:id` - Delete a post
+  **[&uarr; Top](#table-of-content)**
+
+## File Structure
+
+```plaintext
+.
+├── data
+│   ├── index.ts
+│   └── posts.json
+├── http
+│   ├── monitoring.http
+│   └── posts.http
+├── package.json
+├── package-lock.json
+├── README.md
+└── src
+    ├── app.ts
+    ├── controllers
+    │   ├── apiMonitoring.controller.ts
+    │   ├── index.ts
+    │   └── posts.controller.ts
+    ├── dtos
+    │   ├── index.ts
+    │   └── posts.dto.ts
+    ├── interfaces
+    │   ├── index.ts
+    │   ├── jsonResponse.interface.ts
+    │   └── post.interface.ts
+    ├── models
+    │   ├── index.ts
+    │   └── posts.model.ts
+    ├── routes
+    │   ├── apiMonitoring.routes.ts
+    │   ├── index.ts
+    │   └── posts.routes.ts
+    └── utils
+        ├── enums
+        │   ├── HttpStatusCode.enum.ts
+        │   └── index.ts
+        └── helpers
+            ├── index.ts
+            └── notImplementedHandler.helper.ts
+
+```
+
+**[&uarr; Top](#table-of-content)**
 
 **_Enjoy the demo!_**
