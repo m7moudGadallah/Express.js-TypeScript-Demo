@@ -23,7 +23,7 @@ class PostsController {
 
     res.status(HttpStatusCodes.OK).json({
       success: true,
-      message: 'Posts retrieved successfully',
+      message: 'Posts are retrieved successfully',
       payload: {
         data: {
           content: posts,
@@ -43,8 +43,17 @@ class PostsController {
     res: Response<JsonResponse.IJsonResponse<IPost>>,
     next: NextFunction
   ) {
-    // TODO: implement getSinglePost
-    notImplementedHandler(req, res, next);
+    const post: IPost = Post.find({ id: req.params.id })?.[0];
+
+    res.status(HttpStatusCodes.OK).json({
+      success: true,
+      message: 'Post is retrieved successfully',
+      payload: {
+        data: {
+          content: post,
+        },
+      },
+    });
   }
 
   /**

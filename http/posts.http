@@ -9,7 +9,7 @@ GET {{URL}}
 ###
 # @desc  Get One post
 # @route  GET api/posts/:id
-GET {{URL}}
+GET {{URL}}/:id
 
 ###
 # @desc  Create a post
