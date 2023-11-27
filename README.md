@@ -18,7 +18,6 @@ This is a personal practice project for experimenting with Express.js and TypeSc
   - [API Endpoints](#api-endpoints)
 
 <!-- /TOC -->
-<!-- /TOC -->
 
 ## Getting started
 
@@ -26,7 +25,7 @@ This is a personal practice project for experimenting with Express.js and TypeSc
 
 ```bash
  git clone <repository-url>
- cd posts-api-demo
+ cd Express.js-TypeScript-Demo
 ```
 
 **[&uarr; Top](#table-of-content)**
