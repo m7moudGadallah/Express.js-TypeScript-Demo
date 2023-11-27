@@ -12,8 +12,8 @@ interface IResponsePayload<T> {
   token?: string;
   otp?: string;
   data?: {
-    count: T extends any[] ? number : never;
-    pagination: T extends any[] ? IPagination : never;
+    count?: T extends any[] ? number : never;
+    pagination?: T extends any[] ? IPagination : never;
     content: T;
   };
 }
