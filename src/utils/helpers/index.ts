@@ -1,3 +1,3 @@
-import { notImplementedHandler } from './notImplementedHandler';
+import { notImplementedHandler } from './notImplementedHandler.helper';
 
 export { notImplementedHandler };
