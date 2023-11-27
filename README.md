@@ -1,6 +1,8 @@
 # Express.js, TypeScript Demo
 
-This is a personal practice project for experimenting with Express.js and TypeScript. Please note that this demo **doesn't use a database**. Instead, it loads sample data from a JSON file when the server starts. The project includes a model class that performs CRUD operations on this data.
+This is a personal practice project for experimenting with Express.js and TypeScript.
+
+> Please note that this demo **doesn't use a database**. Instead, it loads sample data from a JSON file when the server starts. The project includes a model class that performs CRUD operations on this data.
 
 ## Table of content
 
@@ -15,6 +17,7 @@ This is a personal practice project for experimenting with Express.js and TypeSc
   - [Usage](#usage)
   - [API Endpoints](#api-endpoints)
 
+<!-- /TOC -->
 <!-- /TOC -->
 
 ## Getting started
