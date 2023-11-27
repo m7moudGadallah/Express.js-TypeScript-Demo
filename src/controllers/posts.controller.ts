@@ -4,6 +4,7 @@ import { PostsDTO } from '../dtos';
 import { IPost, JsonResponse } from '../interfaces';
 import { notImplementedHandler } from '../utils/helpers';
 import { HttpStatusCodes } from '../utils/enums';
+import { UpdatePostDTO } from '../dtos/posts.dto';
 
 /**
  * Posts Request Handlers
@@ -91,12 +92,27 @@ class PostsController {
    * @description Update single post
    */
   public static async updatePost(
-    req: Request<{ id: string }, JsonResponse.IJsonResponse<IPost>, undefined>,
+    req: Request<
+      { id: string },
+      JsonResponse.IJsonResponse<IPost>,
+      UpdatePostDTO
+    >,
     res: Response<JsonResponse.IJsonResponse<IPost>>,
     next: NextFunction
   ) {
-    // TODO: implement updatePost
-    notImplementedHandler(req, res, next);
+    const { id } = req.params;
+    const { title, body } = req.body;
+    const post: IPost = Post.update({ id }, { title, body });
+
+    res.status(HttpStatusCodes.OK).json({
+      success: true,
+      message: 'Post is updated successfully',
+      payload: {
+        data: {
+          content: post,
+        },
+      },
+    });
   }
 
   /**
