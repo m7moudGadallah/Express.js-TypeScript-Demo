@@ -3,6 +3,7 @@ import { Request, Response, NextFunction } from 'express';
 import { PostsDTO } from '../dtos';
 import { IPost, JsonResponse } from '../interfaces';
 import { notImplementedHandler } from '../utils/helpers';
+import { HttpStatusCodes } from '../utils/enums';
 
 /**
  * Posts Request Handlers
@@ -18,8 +19,18 @@ class PostsController {
     res: Response<JsonResponse.IJsonResponse<IPost[]>>,
     next: NextFunction
   ) {
-    // TODO: implement getPosts
-    notImplementedHandler(req, res, next);
+    const posts: IPost[] = Post.find();
+
+    res.status(HttpStatusCodes.OK).json({
+      success: true,
+      message: 'Posts retrieved successfully',
+      payload: {
+        data: {
+          content: posts,
+          count: posts.length,
+        },
+      },
+    });
   }
 
   /**
