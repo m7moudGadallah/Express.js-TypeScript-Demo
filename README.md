@@ -65,7 +65,8 @@ npm run start
 - `POST /api/posts` - Create a new post
 - `PATCH /api/posts/:id` - Update a post
 - `DELETE /api/posts/:id` - Delete a post
-  **[&uarr; Top](#table-of-content)**
+
+**[&uarr; Top](#table-of-content)**
 
 ## File Structure
 
