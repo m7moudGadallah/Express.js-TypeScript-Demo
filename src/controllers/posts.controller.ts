@@ -125,8 +125,11 @@ class PostsController {
     res: Response,
     next: NextFunction
   ) {
-    // TODO: implement deletePost
-    notImplementedHandler(req, res, next);
+    const { id } = req.params;
+
+    Post.delete({ id });
+
+    res.status(HttpStatusCodes.OK).json();
   }
 }
 
